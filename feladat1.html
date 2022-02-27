@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feldat1</title>
+</head>
+
+<body>
+
+    <label for="text">Kérem, adjon meg egy szöveget: </label>
+    <input type="text" id="text" name="text">
+    <button id="printlength">Hossz kiíratása</button>
+
+    <p id="result"></p>
+    <script>
+        document.getElementById("printlength").addEventListener('click', () => {
+            let textLength = document.getElementById('text').value.length;
+
+            document.getElementById('result').innerText = textLength;
+        })
+    </script>
+
+</body>
+
+</html>

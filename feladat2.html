@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat2</title>
+</head>
+
+<body>
+    <label for="family_name">Kérem adja meg a családi nevét: </label>
+    <input type="text" id="family_name">
+    <br>
+    <label for="last_name">Kérem adja meg az utónevét: </label>
+    <input type="text" id="last_name">
+    <button id="bt">Összefűz és alertben kiír</button>
+    <script>
+        document.getElementById("bt").addEventListener('click', () => {
+            let name = document.getElementById('family_name').value + " " + document.getElementById('last_name').value;
+            alert(name);
+        })
+    </script>
+
+
+</body>
+
+</html>
