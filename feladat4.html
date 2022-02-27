@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat4</title>
+</head>
+
+<body>
+    <label for="letterings">Szöveg: </label>
+    <input type="text" id="letterings">
+    <button id="toUpper">Nagybetűssé</button>
+    <button id="toLower">Kisbetűssé</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('toUpper').addEventListener('click', () => {
+            let text = document.getElementById('letterings').value.toUpperCase();
+            document.getElementById('result').innerText = text;
+        })
+        document.getElementById('toLower').addEventListener('click', () => {
+            let text = document.getElementById('letterings').value.toLowerCase();
+            document.getElementById('result').innerText = text;
+        })
+    </script>
+</body>
+
+</html>
