@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat5</title>
+</head>
+
+<body>
+    <label for="letterings">Szöveg: </label>
+    <input type="text" id="letterings">
+    <button id="bt">Visszafelé kiír</button>
+    <p id="result"></p>
+    <script>
+        document.getElementById('bt').addEventListener('click', () => {
+            var letterings = document.getElementById('letterings').value;
+            letters = letterings.split("");
+            letters.reverse();
+            reverseText = letters.join("");
+
+            document.getElementById('result').innerText = reverseText;
+        })
+    </script>
+</body>
+
+</html>
