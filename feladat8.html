@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat8</title>
+</head>
+
+<body>
+    <label for="words">Szöveg: </label>
+    <input type="text" id="words">
+    <button id="bt">Titkosítás</button>
+    <p id="result"></p>
+    <script>
+        document.getElementById('bt').addEventListener('click', () => {
+            let words = document.getElementById('words').value;
+            charCodes = [];
+            for (let i = 0; i < words.length; i++) {
+                charCodes.push(words.charCodeAt(i));
+            }
+            document.getElementById('result').innerText = charCodes;
+        })
+    </script>
+
+</body>
+
+</html>
