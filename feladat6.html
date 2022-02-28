@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat6</title>
+</head>
+
+<body>
+    <label for="at_least_30_chars"> legalább 30 karakteres szöveg: </label>
+    <input type="text" id="at_least_30_chars">
+    <label for="one_word">Egy szót: </label>
+    <input type="text" id="one_word">
+    <button id="search">Keresés</button>
+    <script>
+        document.getElementById('search').addEventListener('click', () => {
+            let sentence = document.getElementById('at_least_30_chars').value;
+            let searchWord = document.getElementById('one_word').value;
+            if (sentence.includes(searchWord)) {
+                alert("Szerepel az adott szó a keresett szövegben!");
+            }
+        })
+    </script>
+
+</body>
+
+</html>
