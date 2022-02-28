@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,17 @@
 </head>
 
 <body>
-
+    <label for="sentence">Szöveg: </label>
+    <input type="text" id="sentence">
+    <button id="bt">Szóközöket számol</button>
+    <p id="result"></p>
+    <script>
+        document.getElementById('bt').addEventListener('click', () => {
+            let text = document.getElementById('sentence').value;
+            let arr = text.split(" ");
+            document.getElementById('result').innerText = arr.length - 1;
+        })
+    </script>
 </body>
 
 </html>
